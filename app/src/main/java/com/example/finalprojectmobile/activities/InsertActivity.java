@@ -27,11 +27,16 @@ public class InsertActivity extends AppCompatActivity{
     EditText itemNameField, itemQtyField, itemDescField;
     Button uploadButton, submitButton;
     ImageView previewImage;
-    ItemDB itemDB;
+    public ItemDB itemDB;
     FirebaseUser currentUser;
     private byte[] imageFile;
 
-    ActivityResultLauncher<Intent> activityResultLaunch = registerForActivityResult(
+    // Khai báo phương thức getter cho imageFile
+    public byte[] getImageFile() {
+        return imageFile;
+    }
+
+    public ActivityResultLauncher<Intent> activityResultLaunch = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
                 if (result.getResultCode() == Activity.RESULT_OK) {

@@ -16,6 +16,10 @@ public class DetailActivity extends AppCompatActivity {
     ImageView itemImageView;
     TextView itemNameText, itemDescText, itemQtyText;
 
+    public ImageView getItemImageView() {
+        return itemImageView;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
